@@ -7,17 +7,11 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import { ProductGrid } from "./productGrid/ProductGrid";
 
-const Products = () => {
+export const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
   let componentMounted = true;
-
-  const dispatch = useDispatch();
-
-  const addProduct = (product) => {
-    dispatch(addCart(product));
-  };
 
   useEffect(() => {
     const getProducts = async () => {
@@ -126,5 +120,3 @@ const Products = () => {
     </>
   );
 };
-
-export default Products;

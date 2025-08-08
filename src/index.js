@@ -17,8 +17,8 @@ import {
   Checkout,
   PageNotFound,
 } from "./pages";
-import ScrollToTop from "./components/ScrollToTop";
 import { Toaster } from "react-hot-toast";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

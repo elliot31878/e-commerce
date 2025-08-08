@@ -1,0 +1,77 @@
+.card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px);
+  }
+}
+
+.quantityButton {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.decreaseButton {
+  color: #dc3545;
+  border: 1px solid #dc3545;
+
+  &:hover:not(:disabled) {
+    background-color: rgba(220, 53, 69, 0.1);
+  }
+}
+
+.increaseButton {
+  color: #28a745;
+  border: 1px solid #28a745;
+
+  &:hover:not(:disabled) {
+    background-color: rgba(40, 167, 69, 0.1);
+  }
+}
+
+.quantityValue {
+  font-size: 1.1rem;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+.removeButton {
+  color: #dc3545;
+  background-color: transparent;
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+
+  &:hover {
+    text-decoration: underline;
+    background-color: rgba(220, 53, 69, 0.05);
+  }
+}
+
+.addButton {
+  padding: 0.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+  }
+}
