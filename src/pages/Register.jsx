@@ -1,7 +1,7 @@
-import React from "react";
-import { Footer, Navbar } from "../components";
 import { Link } from "react-router-dom";
-const Register = () => {
+import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
+const RegisterPage = () => {
   return (
     <>
       <Navbar />
@@ -67,4 +67,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterPage;

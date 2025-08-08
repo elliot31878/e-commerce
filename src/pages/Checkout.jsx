@@ -1,7 +1,8 @@
-import React from "react";
-import { Footer, Navbar } from "../components";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
+
 const Checkout = () => {
   const state = useSelector((state) => state.handleCart);
 
@@ -43,7 +44,8 @@ const Checkout = () => {
                 <div className="card-body">
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0">
-                      Products ({totalItems})<span>${Math.round(subtotal)}</span>
+                      Products ({totalItems})
+                      <span>${Math.round(subtotal)}</span>
                     </li>
                     <li className="list-group-item d-flex justify-content-between align-items-center px-0">
                       Shipping
@@ -269,7 +271,8 @@ const Checkout = () => {
 
                     <button
                       className="w-100 btn btn-primary "
-                      type="submit" disabled
+                      type="submit"
+                      disabled
                     >
                       Continue to checkout
                     </button>
