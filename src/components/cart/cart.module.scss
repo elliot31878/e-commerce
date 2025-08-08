@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+
+.pageContainer {
+  padding: 2rem 0;
+  min-height: 60vh;
+}
+
+.pageTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.cartContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.cartContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @media (min-width: 992px) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.itemsList {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.itemsHeader {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid $border-color;
+  background-color: $light-gray;
+
+  h5 {
+    margin: 0;
+    font-weight: 600;
+  }
+}

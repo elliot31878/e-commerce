@@ -1,0 +1,42 @@
+@import "../../styles/variables";
+
+.emptyCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  background-color: $light-gray;
+  border-radius: 8px;
+}
+
+.emptyContent {
+  text-align: center;
+  padding: 2rem;
+
+  h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: $dark-color;
+  }
+}
+
+.continueShopping {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: $dark-color;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: darken($dark-color, 10%);
+    transform: translateY(-1px);
+    color: white;
+  }
+
+  i {
+    margin-right: 0.5rem;
+  }
+}

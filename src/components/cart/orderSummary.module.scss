@@ -1,0 +1,62 @@
+@import "../../styles/variables";
+
+.orderSummary {
+  position: sticky;
+  top: 1rem;
+}
+
+.summaryCard {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.summaryHeader {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid $border-color;
+  background-color: $light-gray;
+
+  h5 {
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+.summaryBody {
+  padding: 1.5rem;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $border-color;
+}
+
+.summaryTotal {
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.checkoutButton {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    transform: translateY(-1px);
+    color: white;
+  }
+}
