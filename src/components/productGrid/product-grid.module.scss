@@ -1,0 +1,64 @@
+$animation-duration: 0.4s;
+$animation-delay-step: 50ms;
+$hover-transition: all 0.25s ease-in-out;
+
+$shadow-color: rgba(0, 0, 0, 0.1);
+$shadow-hover-color: rgba(0, 0, 0, 0.15);
+
+.product-grid-container {
+  margin: 1rem;
+}
+
+.product-grid-inner {
+  padding: 0.5rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-item {
+  padding: 0.5rem;
+  height: 100%;
+  animation: fadeInUp $animation-duration ease-out forwards;
+  opacity: 0;
+
+  &:hover {
+    .product-card {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 12px $shadow-hover-color;
+    }
+  }
+}
+
+.product-card {
+  height: 100%;
+  transition: $hover-transition;
+  box-shadow: 0 2px 8px $shadow-color;
+  border-radius: 4px;
+  overflow: hidden;
+  background: white;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px $shadow-hover-color;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-grid-inner {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    gap: 1.5rem !important;
+  }
+
+  .product-item {
+    padding: 0.75rem;
+  }
+}
